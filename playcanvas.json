@@ -1,0 +1,40 @@
+{
+    "frames": { {% for sprite in allSprites %}
+        "{% if settings.trimSpriteNames %}{{sprite.trimmedName}}{% else %}{{sprite.fullName}}{% endif %}": {
+            "frame": {
+                "x": {{sprite.frameRect.x}},
+                "y": {{sprite.frameRect.y}},
+                "w": {{sprite.frameRect.width}},
+                "h": {{sprite.frameRect.height}}
+            },
+            "spriteSourceSize": {
+                "x": {{sprite.sourceRect.x}},
+                "y": {{sprite.sourceRect.y}},
+                "w": {{sprite.sourceRect.width}},
+                "h": {{sprite.sourceRect.height}}
+            },
+            "pivot": {
+                "x": {{sprite.pivotPointNorm.x}},
+                "y": {{sprite.pivotPointNorm.y}}
+            }{% if sprite.scale9Enabled %},
+            "borders": {
+                "x": {{sprite.scale9Borders.x}},
+                "y": {{sprite.scale9Borders.y}},
+                "w": {{sprite.scale9Borders.width}},
+                "h": {{sprite.scale9Borders.height}}
+            }
+            {% endif %}
+        }{% if not forloop.last %}, {% endif %}{% endfor %}
+    },
+    "meta": {
+        "app": "https://www.codeandweb.com/texturepacker",
+        "exporter": "playcanvas",
+        "image": "{{texture.fullName}}",
+        "size": {
+            "w": {{texture.size.width}},
+            "h": {{texture.size.height}}
+        },
+        "smartupdate": "{{smartUpdateKey}}",
+        "version": "1.0"
+    }
+}

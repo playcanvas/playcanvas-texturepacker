@@ -1,0 +1,63 @@
+<exporter version="1.0">
+  <!-- identifier of the exporter -->
+  <name>playcanvas</name>
+
+  <!-- display name of the exporter for the combo box -->
+  <displayName>PlayCanvas</displayName>
+
+  <!-- description of the exporter -->
+  <description>Exporter for PlayCanvas</description>
+
+  <!-- exporter version -->
+  <version>1.0</version>
+
+  <!-- currently only one file allowed -
+       more to come soon -->
+  <files>
+      <file>
+          <!-- name of this file variable -->
+          <name>pcjson</name>
+
+          <!-- human readable name (for GUI) -->
+          <displayName>PlayCanvas (atlas)</displayName>
+
+          <!-- file extension for the file -->
+          <fileExtension>json</fileExtension>
+
+          <!-- description what the file contains, used in tooltips in the GUI -->
+          <description>JSON data file for PlayCanvas</description>
+
+          <!-- name of the template file -->
+          <template>playcanvas.json</template>
+      </file>
+  </files>
+
+  <!-- target framework supports trimming -->
+  <supportsTrimming>yes</supportsTrimming>
+
+  <!-- target framework supports rotated sprites -->
+  <supportsRotation>no</supportsRotation>
+
+  <!-- rotated sprites direction (cw/ccw) -->
+  <rotationDirection>cw</rotationDirection>
+
+  <!-- supports npot sizes -->
+  <supportsNPOT>true</supportsNPOT>
+
+  <!-- supports file name stripping (remove .png etc.) -->
+  <supportsTrimSpriteNames>yes</supportsTrimSpriteNames>
+
+  <!-- supports texture subpath -->
+  <supportsTextureSubPath>no</supportsTextureSubPath>
+
+  <!-- enable pivot point editor -->
+  <supportsPivotPoint>true</supportsPivotPoint>
+
+  <defaults>
+    <defaultPivotPoint>0.5,0.5</defaultPivotPoint>
+  </defaults>
+
+  <!-- framework can read in border values for 9-patch scaling of sprites (default=false) -->
+  <supportsScale9>true</supportsScale9>
+
+</exporter>
