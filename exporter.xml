@@ -60,4 +60,7 @@
   <!-- framework can read in border values for 9-patch scaling of sprites (default=false) -->
   <supportsScale9>true</supportsScale9>
 
+  <!-- invert the Y for pivot placement -->
+  <spriteOrigin>BottomLeft</spriteOrigin>
+
 </exporter>
